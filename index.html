@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Four horses - Клуб четырех коней</title>
+  </head>
+  <body class="page">
+    <header class="page__header header">
+      <div class="header-wrapper">
+        <a class="header__logo" title="Главная страница">
+          <img
+            src="images/logo.svg"
+            width="213"
+            height="32"
+            alt="Логотип сайта - Four horses - Клуб четырех коней."
+          />
+        </a>
+        <p class="header__promo">
+          Превратите уездный город в столицу земного шара
+        </p>
+        <p class="header__text">
+          Оплатите взнос на телеграммы для организации Международного
+          васюкинского турнира по шахматам
+        </p>
+        <a class="button button-default button-indent" href="#!"
+          >Поддержать шахматную мысль</a
+        >
+        <a class="button button-primary" href="#!">Подробнее о турнире</a>
+      </div>
+      <p class="header__running-string">дело рук самих утопающих!</p>
+    </header>
+
+    <main class="page__main">
+      <section class="chess-event">
+        <h1 class="visually-hidden">Международный васюкинский турнир.</h1>
+        <p class="chess-event__text">
+          Чтобы поддержать Международный васюкинский турнир
+        </p>
+        <article class="chess-event__card card">
+          <img
+            class="card__img"
+            src="/images/card-1.jpg"
+            width="335"
+            height="213"
+            alt="Процесс игры в шахматы."
+          />
+          <p class="card__text">
+            посетите лекцию на тему: <span>«Плодотворная дебютная идея»</span>
+          </p>
+        </article>
+
+        <article class="chess-event__card card">
+          <img
+            class="card__img"
+            src="/images/card-2.jpg"
+            width="335"
+            height="402"
+            alt="Шахматист думает."
+          />
+          <p class="card__text">
+            и Сеанс
+            <span
+              >одновременной игры в шахматы на 160 досках гроссмейстера
+              О. Бендера</span
+            >
+          </p>
+        </article>
+      </section>
+
+      <section class="event-time">
+        <h2 class="visually-hidden">Вреия проведения мероприятия.</h2>
+        <dl class="event-time__list">
+          <div>
+            <dt>Место проведения:</dt>
+            <dd>Клуб «Картонажник»</dd>
+          </div>
+          <div>
+            <dt>Дата и время мероприятия:</dt>
+            <dd>22 июня 1927 г. в 18:00</dd>
+          </div>
+          <div>
+            <dt>Стоимость входных билетов:</dt>
+            <dd>20 коп.</dd>
+          </div>
+          <div>
+            <dt>Плата за игру:</dt>
+            <dd>50 коп.</dd>
+          </div>
+          <div>
+            <dt>Взнос на телеграммы:</dt>
+            <dd>100 руб. 21 руб. 16 коп.</dd>
+          </div>
+        </dl>
+        <p class="event-time__text">
+          По всем вопросам обращаться в администрацию к К. Михельсону
+        </p>
+      </section>
+
+      <section class="history-block">
+        <h2>Этапы преображения Васюков</h2>
+        <p>Будущие источники обогащения васюкинцев</p>
+        <ul class="history-block__list slider">
+          <li class="history-block__item slide slide-1">
+            <p>Строительство железнодорожной магистрали Москва-Васюки</p>
+            <p>
+              Открытие фешенебельной гостиницы «Проходная пешка» и других
+              небоскрёбов
+            </p>
+          </li>
+          <li class="history-block__item slide slide-2">
+            <p>
+              Поднятие сельского хозяйства в радиусе на тысячу километров:
+              производство овощей, фруктов, икры, шоколадных конфет
+            </p>
+          </li>
+          <li class="history-block__item slide slide-3">
+            <p>Строительство дворца для турнира</p>
+            <p>Размещение гаражей для гостевого автотранспорта</p>
+          </li>
+          <li class="history-block__item slide slide-4">
+            <p>
+              Постройка сверхмощной радиостанции для передачи всему миру
+              сенсационных результатов
+            </p>
+          </li>
+          <li class="history-block__item slide slide-5">
+            <p>
+              Создание аэропорта «Большие Васюки» с регулярным отправлением п
+              очтовых самолётов и дирижаблей во все концы света, включая
+              Лос-Анжелос и Мельбурн
+            </p>
+          </li>
+        </ul>
+        <button class="prev">
+          <span class="visually-hidden">Предыдущий слайд.</span>
+        </button>
+        <input
+          class="slider-btn slider-btn-1"
+          type="radio"
+          name="slide"
+          checked
+        />
+        <input class="slider-btn slider-btn-2" type="radio" name="slide" />
+        <input class="slider-btn slider-btn-3" type="radio" name="slide" />
+        <input class="slider-btn slider-btn-4" type="radio" name="slide" />
+        <input class="slider-btn slider-btn-5" type="radio" name="slide" />
+        <button class="next">
+          <span class="visually-hidden">Следующий слайд.</span>
+        </button>
+      </section>
+
+      <section class="events-faces">
+        <h2 class="events-faces__title">Участники турнира</h2>
+        <ul class="events-faces__list">
+          <li class="events-faces__item">
+            <img
+              src="/images/event-face-1.png"
+              width="244"
+              height="244"
+              alt="Хозе-Рауль Капабланка."
+            />
+            <p>Хозе-Рауль Капабланка</p>
+            <p>Чемпион мира по шахматам</p>
+            <a href="#!">Подробнее</a>
+          </li>
+          <li class="events-faces__item">
+            <img
+              src="/images/event-face-2.png"
+              width="244"
+              height="244"
+              alt="Эммануил Ласкер."
+            />
+            <p>Эммануил Ласкер</p>
+            <p>Чемпион мира по шахматам</p>
+            <a href="#!">Подробнее</a>
+          </li>
+          <li class="events-faces__item">
+            <img
+              src="/images/event-face-3.png"
+              width="244"
+              height="244"
+              alt="Александр Алехин."
+            />
+            <p>Александр Алехин</p>
+            <p>Чемпион мира по шахматам</p>
+            <a href="#!">Подробнее</a>
+          </li>
+          <li class="events-faces__item">
+            <img
+              src="/images/event-face-4.png"
+              width="244"
+              height="244"
+              alt="Арон Нимцович."
+            />
+            <p>Арон Нимцович</p>
+            <p>Чемпион мира по шахматам</p>
+            <a href="#!">Подробнее</a>
+          </li>
+          <li class="events-faces__item">
+            <img
+              src="/images/event-face-5.png"
+              width="244"
+              height="244"
+              alt="Рихард Рети."
+            />
+            <p>Рихард Рети</p>
+            <p>Чемпион мира по шахматам</p>
+            <a href="#!">Подробнее</a>
+          </li>
+          <li class="events-faces__item">
+            <img
+              src="/images/event-face-6.png"
+              width="244"
+              height="244"
+              alt="Остап Бендер."
+            />
+            <p>Остап Бендер</p>
+            <p>Гроссмейстер</p>
+            <a href="#!">Подробнее</a>
+          </li>
+        </ul>
+        <p>
+          <button class="prev">
+            <span class="visually-hidden">Предыдущий участник.</span>
+          </button>
+          <span>1/6</span>
+          <button class="next">
+            <span class="visually-hidden">Следующий участник.</span>
+          </button>
+        </p>
+      </section>
+    </main>
+
+    <footer class="page__footer footer">
+      <p class="header__running-string">дело рук самих утопающих!</p>
+      <p class="footer__text">
+        Все персонажи, события и цитаты являются вымышленными и не принадлежат
+        создателям сайта. С подробностями можно познакомиться в главе XXXIV
+        романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+      </p>
+    </footer>
+
+    <script>
+      window.pixelperfect = {
+        breakpoints: [375, 768, 1260, 1380, 1600],
+        folder: "images/pixelperfect",
+      };
+    </script>
+    <script
+      src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js"
+      defer
+    ></script>
+  </body>
+</html>
