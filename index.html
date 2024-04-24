@@ -23,10 +23,12 @@
           Оплатите взнос на телеграммы для организации Международного
           васюкинского турнира по шахматам
         </p>
-        <a class="button button-default button-indent" href="#!"
-          >Поддержать шахматную мысль</a
-        >
-        <a class="button button-primary" href="#!">Подробнее о турнире</a>
+        <div class="header__button-wrapper">
+          <a class="button button-default button-indent" href="#!"
+            >Поддержать шахматную мысль</a
+          >
+          <a class="button button-primary" href="#!">Подробнее о турнире</a>
+        </div>
       </div>
       <p class="header__running-string">дело рук самих утопающих!</p>
     </header>
@@ -34,23 +36,25 @@
     <main class="page__main">
       <section class="chess-event">
         <h1 class="visually-hidden">Международный васюкинский турнир.</h1>
-        <p class="chess-event__text">
-          Чтобы поддержать Международный васюкинский турнир
-        </p>
-        <article class="chess-event__card card">
+        <article class="chess-event__card card card--1">
+          <div class="chess-event__wrapper">
+            <p class="chess-event__text">
+              Чтобы поддержать Международный васюкинский турнир
+            </p>
+            <p class="card__text">
+              посетите лекцию на тему: <span>«Плодотворная дебютная идея»</span>
+            </p>
+          </div>
           <img
-            class="card__img"
+            class="card__img card__img--1"
             src="/images/card-1.jpg"
             width="335"
             height="213"
             alt="Процесс игры в шахматы."
           />
-          <p class="card__text">
-            посетите лекцию на тему: <span>«Плодотворная дебютная идея»</span>
-          </p>
         </article>
 
-        <article class="chess-event__card card">
+        <article class="chess-event__card card card--2">
           <img
             class="card__img card__img--big"
             src="/images/card-2.jpg"
@@ -63,49 +67,51 @@
             <span>одновременной игры в шахматы на 160 досках</span>
             гроссмейстера О. Бендера
           </p>
+          <div class="event-time">
+            <dl class="event-time__list event-list">
+              <div class="event-list__item">
+                <dt class="event-list__termin">Место проведения:</dt>
+                <dd class="event-list__definition">Клуб «Картонажник»</dd>
+              </div>
+              <div class="event-list__item">
+                <dt class="event-list__termin">Дата и время мероприятия:</dt>
+                <dd class="event-list__definition">22 июня 1927 г. в 18:00</dd>
+              </div>
+              <div class="event-list__item">
+                <dt class="event-list__termin">Стоимость входных билетов:</dt>
+                <dd class="event-list__definition">20 коп.</dd>
+              </div>
+              <div class="event-list__item">
+                <dt class="event-list__termin event-list__termin--inline">
+                  Плата за игру:
+                </dt>
+                <dd
+                  class="event-list__definition event-list__definition--inline"
+                >
+                  <span>&nbsp;</span>50 коп.
+                </dd>
+              </div>
+              <div class="event-list__item">
+                <dt class="event-list__termin">Взнос на телеграммы:</dt>
+                <dd class="event-list__definition">
+                  <del>100 руб.</del>&nbsp; 21 руб. 16 коп.
+                </dd>
+              </div>
+            </dl>
+            <p class="event-time__text">
+              По всем вопросам обращаться в администрацию к К. Михельсону
+            </p>
+          </div>
         </article>
       </section>
 
-      <section class="event-time">
-        <h2 class="visually-hidden">Вреия проведения мероприятия.</h2>
-        <dl class="event-time__list event-list">
-          <div class="event-list__item">
-            <dt class="event-list__termin">Место проведения:</dt>
-            <dd class="event-list__definition">Клуб «Картонажник»</dd>
-          </div>
-          <div class="event-list__item">
-            <dt class="event-list__termin">Дата и время мероприятия:</dt>
-            <dd class="event-list__definition">22 июня 1927 г. в 18:00</dd>
-          </div>
-          <div class="event-list__item">
-            <dt class="event-list__termin">Стоимость входных билетов:</dt>
-            <dd class="event-list__definition">20 коп.</dd>
-          </div>
-          <div class="event-list__item">
-            <dt class="event-list__termin event-list__termin--inline">
-              Плата за игру:
-            </dt>
-            <dd class="event-list__definition event-list__definition--inline">
-              &nbsp;50 коп.
-            </dd>
-          </div>
-          <div class="event-list__item">
-            <dt class="event-list__termin">Взнос на телеграммы:</dt>
-            <dd class="event-list__definition">
-              <del>100 руб.</del>&nbsp; 21 руб. 16 коп.
-            </dd>
-          </div>
-        </dl>
-        <p class="event-time__text">
-          По всем вопросам обращаться в администрацию к К. Михельсону
-        </p>
-      </section>
-
       <section class="history-block">
-        <h2 class="history-block__title">Этапы преображения Васюков</h2>
-        <p class="history-block__text">
-          Будущие источники обогащения васюкинцев
-        </p>
+        <div class="history-block__wrapper">
+          <h2 class="history-block__title">Этапы преображения Васюков</h2>
+          <p class="history-block__text">
+            Будущие источники обогащения васюкинцев
+          </p>
+        </div>
         <ul class="history-block__list slider">
           <li class="history-block__item slide slide-1">
             <p class="slide__text">

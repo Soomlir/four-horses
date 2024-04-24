@@ -7,6 +7,14 @@
 }
 
 @font-face {
+	font-weight: 700;
+	font-style: normal;
+	font-family: 'Merriweather';
+	font-display: swap;
+	src: local('Merriweather'), url('../fonts/Merriweather-Bold.woff2') format('woff2');
+}
+
+@font-face {
 	font-weight: 400;
 	font-style: normal;
 	font-family: 'GolosText';
@@ -128,7 +136,12 @@ img {
   padding-bottom: 46px;
 }
 
+.chess-event__wrapper {
+  display: contents;
+}
+
 .chess-event__text {
+  order: -1;
   margin: 0;
   padding: 48px 20px 24px;
   font-size: 28px;
@@ -137,11 +150,17 @@ img {
   color: #313131;
 }
 
+.card--1 {
+  display: flex;
+  flex-direction: column;
+}
+
 .card__img {
   padding: 0 20px;
 }
 
 .card__text {
+  order: 1;
   margin: 0;
   padding-top: 23px;
   padding-right: 20px;
@@ -152,6 +171,7 @@ img {
 }
 
 .card__text span {
+  font-family: "Merriweather", "Arial", sans-serif;
   font-weight: 700;
   color: #f54932;
 }
@@ -166,13 +186,14 @@ img {
   padding-top: 16px;
 }
 
+.event-time {
+  padding: 0 20px;
+  padding-top: 50px;
+}
+
 .event-time__list {
   margin: 0;
   margin-bottom: 26px;
-}
-
-.event-time {
-  padding: 0 20px;
 }
 
 .event-list__item {
@@ -219,9 +240,13 @@ img {
 }
 
 .history-block {
-  padding-top: 104px;
+  padding-top: 58px;
   padding-right: 20px;
   padding-left: 20px;
+}
+
+.history-block__wrapper {
+  display: contents;
 }
 
 .history-block__title {
@@ -496,12 +521,195 @@ img {
     background-image: url("../images/header-bg-1366.jpg");
     background-repeat: no-repeat;
   }
+
   .header-wrapper {
+    margin-bottom: 103px;
     padding: 27px 72px;
+  }
+
+  .header__logo {
+    margin-bottom: 56px;
   }
 
   .header__logo img {
     width: 241px;
     height: 36px;
+  }
+
+  .header__promo {
+    margin-bottom: 25px;
+    width: 542px;
+    font-size: 60px;
+    line-height: 110%;
+    color: #313131;
+  }
+  
+  .header__text {
+    width: 542px;
+    margin-bottom: 39px;
+    text-align: center;
+    color: #313131;
+  }
+
+  .header__button-wrapper {
+    width: 542px;
+    display: flex;
+    align-items: top;
+    column-gap: 16px;
+  }
+
+  .button-default {
+    width: 263px;
+    margin-bottom: 0;
+    padding: 15px 56px;
+    box-sizing: border-box;
+  }
+
+  .button-primary {
+    width: 263px;
+    padding: 13px 56px 14px 56px;
+    box-sizing: border-box;
+    border: 2px solid #1f1f1f;
+    background: transparent;
+  }
+
+  .button-primary:hover,
+  .button-primary:focus {
+    color: #ffffff;
+    background-color: #1f1f1f;
+  }
+
+  .header__running-string {
+    padding-top: 17px;
+    padding-bottom: 18px;
+    font-size: 22px;
+    line-height: 110%;
+  }
+
+  .chess-event__wrapper {
+    display: inline;
+  } 
+
+  .card {
+    padding: 80px 72px 0;
+  }
+
+  .card--1 {
+    display: grid;
+    grid-template-columns: 764fr 394fr; 
+    align-items: center; 
+    gap: 64px;
+  }
+
+  .card__img--1 {
+    width: 394px;
+    padding: 0;
+  }
+
+  .chess-event__text,
+  .card__text {
+    display: inline;
+    padding: 0;
+    font-size: 36px;
+    color: #313131;
+  }
+
+  .card--2 {
+    display: grid;
+    grid-template-columns: 531px 1fr;
+    grid-template-rows: 269px 300px;
+    padding: 0 43px;
+    padding-bottom: 80px;
+  }
+
+  .card__img--big {
+    width: 531px;
+    padding-top: 17px;
+    grid-row: 1 / -1;
+  }
+
+  .card__text--different {
+    grid-column: 2 / -1;
+    display: block;
+    order: 0;
+    padding: 64px 65px 40px 16px;
+  }
+
+  .event-time {
+    padding: 0 16px;
+    padding-top: 2px;
+  }
+
+  .event-list {
+    width: 704px;
+    margin-bottom: 0;
+  }
+
+  .event-list__item {
+    display: grid;
+    grid-template-columns: 307px 1fr;
+    margin: 0;
+    
+  }
+
+  .event-list__termin {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: rgba(49, 49, 49, 0.7);
+    border-right: 2px solid #d0d0d0;
+  }
+
+  .event-list__definition {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+  }
+
+  .event-list__item:first-child .event-list__termin {
+    padding-top: 0;
+  }
+  
+  .event-list__item:first-child .event-list__definition {
+    padding-top: 0;
+  }
+
+  .event-list__item:last-child .event-list__termin {
+    padding-bottom: 0;
+  }
+  
+  .event-list__item:last-child .event-list__definition {
+    padding-bottom: 0;
+  }
+
+  .event-time__text {
+    margin: 0;
+    margin-top: 48px;
+    font-size: 20px;
+  }
+
+  .event-list__definition--inline span {
+    display: none;
+  }
+
+  .history-block {
+    padding: 96px 72px 0;
+  }
+
+  .history-block__wrapper {
+    display: block;
+    width: 806px;
+  }
+
+  .history-block__title {
+    display: inline;
+    font-size: 54px;
+    line-height: 120%;
+  }
+
+  .history-block__text {
+    display: inline-block;
+    width: 280px;
+    padding-left: 15px;
+    font-size: 20px;
   }
 }
