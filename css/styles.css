@@ -60,7 +60,8 @@ img {
 
 .button {
   display: block;
-  padding: 14px 28px;
+  width: 335px;
+  padding: 13px 26px;
   text-decoration: none;
   background-color: #1f1f1f;
   font-family: var(--golos-text-font);
@@ -70,6 +71,7 @@ img {
   border-radius: 66px;
   text-align: center;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
 }
 
 .button:hover,
@@ -83,7 +85,7 @@ img {
 }
 
 .header-wrapper {
-  margin-bottom: 274px;
+  margin-bottom: 275px;
   padding: 18px 20px;
 }
 
@@ -96,17 +98,18 @@ img {
   margin: 0;
   margin-bottom: 19px;
   font-size: 36px;
-  line-height: 110%;
+  line-height: 111%;
   color: #313131;
   text-transform: uppercase;
 }
 
 .header__text {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
   font-family: var(--golos-text-font);
   font-size: 18px;
   line-height: 130%;
+  color: #313131;
 }
 
 .button-indent {
@@ -179,7 +182,7 @@ img {
 .card__img--big {
   width: 375px;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 23px;
 }
 
 .card__text--different {
@@ -188,7 +191,7 @@ img {
 
 .event-time {
   padding: 0 20px;
-  padding-top: 50px;
+  padding-top: 48px;
 }
 
 .event-time__list {
@@ -215,12 +218,14 @@ img {
 
 .event-list__termin {
   padding-bottom: 9px;
+  color: rgba(49, 49, 49, 0.7);
 }
 
 .event-list__definition {
   margin: 0;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
   font-weight: 600;
+  color: #313131;
 }
 
 .event-list__definition del {
@@ -301,6 +306,7 @@ img {
   font-family: var(--golos-text-font);
   font-size: 18px;
   line-height: 120%;
+  color: #313131;
 }
 
 .slide__text {
@@ -339,6 +345,11 @@ img {
 .slide-1 {
   display: block;
   padding-top: 66px;
+}
+
+.slide-2 {
+  display: block;
+  padding-bottom: 10px;
 }
 
 .buttons-wrapper {
@@ -460,7 +471,7 @@ img {
 .events-faces__link {
   display: block;
   width: 89px;
-  margin: 13px auto 40px;
+  margin: 12px auto 40px;
   padding: 6px 12px 8px;
   font-family: var(--golos-text-font);
   font-size: 16px;
@@ -508,13 +519,21 @@ img {
   font-family: var(--golos-text-font);
   font-size: 16px;
   line-height: 120%;
-  color: #313131;
+  color: rgba(49, 49, 49, 0.6);
   background-color: #e9ded4;
 }
 
-
-
-
+.footer__running-string {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #f54932;
+  box-sizing: border-box;
+  font-family: inherit;
+}
 
 @media (min-width: 1366px) {
   .header {
@@ -711,5 +730,205 @@ img {
     width: 280px;
     padding-left: 15px;
     font-size: 20px;
+  }
+
+  .slider {
+    display: grid;
+    grid-template-columns: repeat(3, 394px);
+    grid-template-rows: 112px 112px 136px;
+    gap: 20px;
+    padding-top: 54px;
+  }
+
+  .slider::before {
+    background: none;
+  }
+
+  .slide {
+    display: block;
+    background-repeat: repeat;
+  }
+
+  .slide-1 {
+    padding: 0;
+    background-image: url("../images/slide-desktop-1.jpg");
+  }
+
+  .slide-2 {
+    padding: 0;
+    background-image: url("../images/slide-desktop-2.jpg");
+  }
+
+  .slide-3 {
+    grid-row: span 2;
+    background-image: url("../images/slide-desktop-3.jpg");
+  }
+
+  .slide-4 {
+    background-image: url("../images/slide-desktop-4.jpg");
+  }
+
+  .slide-5 {
+    background-image: url("../images/slide-desktop-5.jpg");
+  }
+
+  .slide-5 .slide__text {
+    padding-right: 60px;
+  }
+
+  .slide-6 {
+    background-image: url("../images/slide-desktop-6.jpg");
+  }
+
+  .slide-7 {
+    position: relative;
+    grid-column: span 2;
+    background-image: url("../images/slide-desktop-7.jpg");
+  }
+
+  .slide-7 .slide__text {
+    padding-right: 300px;
+  }
+
+  .slide-7::after {
+    position: absolute;
+    content: "";
+    right: -44px;
+    bottom: -3px;
+    width: 384px;
+    height: 235px;
+    background-image: url("../images/plane-desktop.png");
+  }
+
+  .slide__text {
+    padding-top: 20px;
+    padding-left: 72px;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 500;
+  }
+
+  .slide__text span {
+    top: 20px;
+    left: 20px;
+  }
+
+  .buttons-wrapper {
+    display: none;
+  }
+
+  .events-faces {
+    display: grid;
+    grid-template-columns: 806px 415px;
+    grid-template-rows: 65px 1fr;
+    padding: 201px 72px 100px;
+  }
+
+  .events-faces__title {
+    font-size: 54px;
+    line-height: 120%;
+    color: #313131;
+  }
+
+  .events-faces__controls {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .events-faces__list {
+    display: flex;
+    justify-content: space-between;
+    width: 1148px;
+    padding: 0 37px;
+    padding-top: 59px;
+  }
+
+  .events-faces__item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .events-faces__list .events-faces__img {
+    width: 320px;
+    margin-bottom: 29px;
+    padding: 0;
+  }
+
+  .events-faces__item--1,
+  .events-faces__item--2,
+  .events-faces__item--3 {
+    display: flex;
+  }
+
+  .events-faces__controls {
+    align-self: start;
+    justify-self: end;
+    width: 151px;
+    margin: 0;
+    margin-top: 9px;
+  }
+
+  .events-faces__prev,
+  .events-faces__next {
+    width: 44px;
+    height: 44px;
+  }
+
+  .events-faces__prev:hover,
+  .events-faces__next:hover,
+  .events-faces__prev:focus,
+  .events-faces__next:focus {
+    background-color: #fbce51;
+  }
+
+  .events-faces__prev:disabled,
+  .events-faces__next:disabled {
+    background-color: #d6d6d6;
+  }
+
+  .events-faces__img {
+    margin-bottom: 28px;
+  }
+
+  .events-faces__name {
+    padding: 0;
+    color: #313131;
+  }
+
+  .events-faces__rank {
+    margin-top: 3px;
+    margin-bottom: 18px;
+    padding: 0;
+  }
+
+  .events-faces__link {
+    margin-top: auto;
+    padding: 6px 11px 7px;
+  }
+
+  .events-faces__link:hover,
+  .events-faces__link:focus {
+    color: #ffffff;
+    background-color: #3057a2;
+  }
+
+  .footer__running-string {
+    margin: 0;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #f54932;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+
+  .footer__text {
+    margin: 0;
+    padding: 40px 72px 72px; 
+    font-size: 16px;
+    line-height: 120%;
+    color: rgba(49, 49, 49, 0.6);
   }
 }
