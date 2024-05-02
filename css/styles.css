@@ -410,14 +410,11 @@ img {
 }
 
 .slide__prev:hover,
-.slide__prev:focus,
-.slide__next:hover,
 .slide__prev:focus {
   background-color: #fbce51;
 }
 
-.slide__prev:disabled,
-.slide__next:disabled {
+.slide__prev:disabled {
   background-color: rgba(49, 49, 49, 0.2);
 }
 

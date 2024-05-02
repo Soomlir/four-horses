@@ -7,41 +7,39 @@ document.querySelectorAll('[data-slider]').forEach((slider) => {
   let currentIndex = 0;
 
   const setSlide = (index) => {
-    prevButton.disabled = false;
-    nextButton.disabled = false;
-    if (index > lastIndex) {
+    if (index >= lastIndex) {
       currentIndex = lastIndex;
-      nextButton.disabled = true;
-    } else if (index < 0) {
+    } else if (index <= 0) {
       currentIndex = 0;
-      prevButton.disabled = true;
     } else {
       currentIndex = index;
     }
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === lastIndex;
 
     sliderItems.forEach((item, i) => {
       if (i === currentIndex) {
         item.setAttribute('data-current', '');
+        sliderButtons[i].setAttribute('data-current', '');
       } else {
         item.removeAttribute('data-current');
+        sliderButtons[i].removeAttribute('data-current');
       }
     });
   };
+
 
   slider.addEventListener('click', (event) => {
     if (event.target === prevButton) {
       setSlide(currentIndex - 1);    
     } else if (event.target === nextButton) {
       setSlide(currentIndex + 1);
-    }
-    
-    sliderButtons.forEach((button, i) => {
+    } else {
+      sliderButtons.forEach((button, i) => {
         if (button === event.target) {
-          button.setAttribute('data-current', '');
           setSlide(i);
-        } else {
-          button.removeAttribute('data-current');
         }
-    });
+      });
+    }
   });
 });
