@@ -332,8 +332,12 @@ img {
   display: none;
 }
 
-.history-block__item--1 {
+.history-block__item[data-current] {
   display: block;
+}
+
+.slider-btn[data-current] { 
+  background-color: #313131;
 }
 
 .slide {
@@ -455,10 +459,6 @@ img {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-}
-
-.slider-btn--current {
-  background-color: #313131;
 }
 
 .events-faces {
