@@ -20,10 +20,14 @@ document.querySelectorAll('[data-slider]').forEach((slider) => {
     sliderItems.forEach((item, i) => {
       if (i === currentIndex) {
         item.setAttribute('data-current', '');
-        sliderButtons[i].setAttribute('data-current', '');
+        if (sliderButtons[i]) {
+          sliderButtons[i].setAttribute('data-current', '');
+        }
       } else {
         item.removeAttribute('data-current');
-        sliderButtons[i].removeAttribute('data-current');
+        if (sliderButtons[i]) {
+          sliderButtons[i].removeAttribute('data-current');
+        }
       }
     });
   };
