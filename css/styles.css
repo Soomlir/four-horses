@@ -328,16 +328,8 @@ img {
   margin: 0;
 }
 
-.history-block__item {
+[data-item]:not([data-current]) {
   display: none;
-}
-
-.history-block__item[data-current] {
-  display: block;
-}
-
-.slider-btn[data-current] { 
-  background-color: #313131;
 }
 
 .slide {
@@ -461,6 +453,10 @@ img {
   cursor: pointer;
 }
 
+.slider-btn[data-current] { 
+  background-color: #313131;
+}
+
 .events-faces {
   max-width: 375px;
   margin-right: auto;
@@ -485,7 +481,6 @@ img {
 }
 
 .events-faces__item {
-  display: none;
   font-family: var(--golos-text-font);
   font-size: 24px;
   line-height: 120%;
@@ -496,6 +491,8 @@ img {
 .events-faces__item--current {
   display: block;
 }
+
+
 
 .events-faces__item img {
   padding: 41px 44px 23px 44px;
@@ -560,27 +557,32 @@ img {
   cursor: pointer;
 }
 
- .events-faces__prev::before {
-    position: absolute;
-    content: "";
-    top: 9px;
-    left: 13px;
-    width: 20px;
-    height: 20px;
-    background-image: url("../images/event-faces-prev-mobile.svg");
-    background-repeat: no-repeat;
-  }
+.events-faces__prev::before {
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 13px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/event-faces-prev-mobile.svg");
+  background-repeat: no-repeat;
+}
 
-  .events-faces__next::before {
-    position: absolute;
-    content: "";
-    top: 9px;
-    left: 14px;
-    width: 20px;
-    height: 20px;
-    background-image: url("../images/event-faces-next-mobile.svg");
-    background-repeat: no-repeat;
-  }
+.events-faces__next::before {
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 14px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/event-faces-next-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+.events-faces__prev:disabled,
+.events-faces__next:disabled {
+  background-color: #d6d6d6;
+}
 
 .footer {
   max-width: 375px;
@@ -783,6 +785,11 @@ img {
   
   .event-list__item:last-child .event-list__definition {
     padding-bottom: 0;
+  }
+
+  .events-faces__item[data-current] + [data-item],
+  .events-faces__item[data-current] + [data-item] + [data-item] {
+    display: block;
   }
 
   .event-time__text {

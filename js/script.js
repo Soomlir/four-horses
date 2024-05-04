@@ -1,8 +1,22 @@
+const getDiff = () => {
+  if (document.body.clientWidth >= 1262) {
+    return 3;
+  }
+  return 1;
+}
+
+let diff = getDiff();
+window.addEventListener('resize', () => {
+  diff = getDiff();
+});
+
+
 document.querySelectorAll('[data-slider]').forEach((slider) => {
   const sliderItems = slider.querySelectorAll('[data-item]');
   const sliderButtons = slider.querySelectorAll('[data-to]');
   const prevButton = slider.querySelector('[data-prev]');
   const nextButton = slider.querySelector('[data-next]');
+  const counter = slider.querySelector('[data-counter]');
   const lastIndex = sliderItems.length - 1;
   let currentIndex = 0;
 
@@ -14,8 +28,14 @@ document.querySelectorAll('[data-slider]').forEach((slider) => {
     } else {
       currentIndex = index;
     }
+
+    if (counter) {
+      counter.textContent = currentIndex + diff;
+    }
+
     prevButton.disabled = currentIndex === 0;
     nextButton.disabled = currentIndex === lastIndex;
+    setCounter();
 
     sliderItems.forEach((item, i) => {
       if (i === currentIndex) {
@@ -32,12 +52,14 @@ document.querySelectorAll('[data-slider]').forEach((slider) => {
     });
   };
 
+  setCounter();
+
 
   slider.addEventListener('click', (event) => {
     if (event.target === prevButton) {
-      setSlide(currentIndex - 1);    
+      setSlide(currentIndex - diff);    
     } else if (event.target === nextButton) {
-      setSlide(currentIndex + 1);
+      setSlide(currentIndex + diff);
     } else {
       sliderButtons.forEach((button, i) => {
         if (button === event.target) {
