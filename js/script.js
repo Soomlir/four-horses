@@ -10,7 +10,6 @@ window.addEventListener('resize', () => {
   diff = getDiff();
 });
 
-
 document.querySelectorAll('[data-slider]').forEach((slider) => {
   const sliderItems = slider.querySelectorAll('[data-item]');
   const sliderButtons = slider.querySelectorAll('[data-to]');
@@ -19,6 +18,12 @@ document.querySelectorAll('[data-slider]').forEach((slider) => {
   const counter = slider.querySelector('[data-counter]');
   const lastIndex = sliderItems.length - 1;
   let currentIndex = 0;
+
+  const setCounter = () => {
+    if (counter) {
+      counter.textContent = currentIndex + diff;
+    }
+  };
 
   const setSlide = (index) => {
     if (index >= lastIndex) {
@@ -53,7 +58,6 @@ document.querySelectorAll('[data-slider]').forEach((slider) => {
   };
 
   setCounter();
-
 
   slider.addEventListener('click', (event) => {
     if (event.target === prevButton) {

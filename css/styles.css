@@ -839,7 +839,7 @@ img {
     background: none;
   }
 
-  .history-block__item {
+  .history-block__item[data-item] {
     display: contents;
   }
 
