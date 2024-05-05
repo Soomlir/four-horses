@@ -16,7 +16,7 @@ document.querySelectorAll('[data-slider]').forEach((slider) => {
   const prevButton = slider.querySelector('[data-prev]');
   const nextButton = slider.querySelector('[data-next]');
   const counter = slider.querySelector('[data-counter]');
-  const lastIndex = sliderItems.length - 1;
+  
   let currentIndex = 0;
 
   const setCounter = () => {
@@ -26,6 +26,7 @@ document.querySelectorAll('[data-slider]').forEach((slider) => {
   };
 
   const setSlide = (index) => {
+    const lastIndex = sliderItems.length - diff;
     if (index >= lastIndex) {
       currentIndex = lastIndex;
     } else if (index <= 0) {
