@@ -320,7 +320,7 @@ img {
 }
 
 .history-block__item {
-  background-image: url("/images/history-item-bg.jpg");
+  background-image: url("../images/history-item-bg.jpg");
   background-repeat: no-repeat;
 }
 
