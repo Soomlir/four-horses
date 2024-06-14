@@ -57,10 +57,19 @@ document.querySelectorAll('[data-slider]').forEach((slider) => {
       }
     });
   };
+  
+  let interval = null;
+  const autoSlide = () => setSlide(currentIndex + diff);
+  const setAuto = () => {
+    interval = setInterval(autoSlide, 1000);
+  };
 
+  setAuto();
   setCounter();
 
   slider.addEventListener('click', (event) => {
+    clearInterval(interval);
+    setTimeout(setAuto, 1000);
     if (event.target === prevButton) {
       setSlide(currentIndex - diff);    
     } else if (event.target === nextButton) {
